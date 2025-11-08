@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  adspower:
+    build: .
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./adspower.deb:/root/adspower.deb:ro
+    restart: unless-stopped
